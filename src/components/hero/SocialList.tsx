@@ -1,6 +1,8 @@
 import clsx from 'clsx'
-import { hero } from '@/config.json'
+import Config from '@/astro-obsidian.config'
 import { motion } from 'framer-motion'
+
+const { hero } = Config
 
 const itemVariants = {
   hidden: {

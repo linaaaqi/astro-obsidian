@@ -1,8 +1,15 @@
 import { useEffect, useRef } from 'react'
 import { init } from '@waline/client'
 import '@waline/client/style'
+import Config from '@/astro-obsidian.config'
 
-export function Waline({ serverURL }: { serverURL: string }) {
+const {
+  comments: {
+    waline: { serverURL },
+  },
+} = Config
+
+export function Waline() {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

@@ -6,7 +6,7 @@ export function getSystemTheme() {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 }
 
-const themeKey = 'gyoza-theme'
+const themeKey = 'astro-obsidian-theme'
 
 export function getLocalTheme() {
   const local = localStorage.getItem(themeKey)

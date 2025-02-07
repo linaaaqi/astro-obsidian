@@ -1,7 +1,9 @@
 ---
-import { hero, author } from '@/config.json'
 import { SocialList } from './SocialList'
 import Highlight from '@/components/Highlight.astro'
+import Config from '@/astro-obsidian.config'
+
+const { hero, author } = Config
 ---
 
 <div class="lg:-mt-16 lg:h-dvh lg:min-h-[720px]">

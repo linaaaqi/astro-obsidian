@@ -6,7 +6,7 @@ on:
 
 jobs:
   close-issues:
-    if: github.repository == 'lxchapu/astro-gyoza'
+    if: github.repository == 'linaaaqi/astro-obsidian'
     runs-on: ubuntu-latest
     permissions:
       issues: write

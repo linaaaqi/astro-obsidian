@@ -1,6 +1,8 @@
 <script>
   import chroma from 'chroma-js'
-  import { color as themeColor } from '@/config.json'
+  import Config from '@/astro-obsidian.config'
+
+  const { color: themeColor } = Config
 
   function pickRandomAccent() {
     const seed = (Math.random() * themeColor.accent.length) | 0

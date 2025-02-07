@@ -9,8 +9,10 @@ import {
 import { BackToTopFAB } from '@/components/BackToTopFAB'
 import { ToastContainer } from '@/components/ToastContainer'
 import { ModalStack } from '@/components/ui/modal'
-import { site } from '@/config.json'
 import '@/styles/global.css'
+import Config from '@/astro-obsidian.config'
+
+const { site } = Config
 
 interface Props {
   title?: string

@@ -1,6 +1,8 @@
-import { site } from '@/config.json'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useHeaderMetaInfo, useShouldHeaderMetaShow } from './hooks'
+import Config from '@/astro-obsidian.config'
+
+const { site } = Config
 
 export function HeaderMeta() {
   const { title, description, slug } = useHeaderMetaInfo()

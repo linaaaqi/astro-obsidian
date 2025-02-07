@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useShouldHeaderMetaShow, useIsMobile } from './hooks'
-import { author } from '@/config.json'
+import Config from '@/astro-obsidian.config'
+
+const { author } = Config
 
 export function AnimatedLogo() {
   const isMobile = useIsMobile()

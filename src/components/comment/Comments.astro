@@ -1,8 +1,14 @@
 ---
 import { Waline } from './Waline'
-import { waline } from '@/config.json'
+import Config from '@/astro-obsidian.config'
+import Giscus from './Giscus.astro'
+
+const {
+  comments: { enable },
+} = Config
 ---
 
 <div>
-  {waline.serverURL && <Waline {...waline} client:visible />}
+  {enable === 'giscus' && <Giscus />}
+  {enable === 'waline' && <Waline client:visible />}
 </div>

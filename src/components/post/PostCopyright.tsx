@@ -1,8 +1,10 @@
-import { author, site } from '@/config.json'
 import { getFormattedDateTime } from '@/utils/date'
 import { AnimatedSignature } from '../AnimatedSignature'
 import { useEffect, useState } from 'react'
 import { toast } from "react-toastify";
+import Config from '@/astro-obsidian.config'
+
+const { author, site } = Config
 
 function getPostUrl(slug: string) {
   return new URL(slug, site.url).href
@@ -34,7 +36,7 @@ export function PostCopyright({
       <p>文章标题：{title}</p>
       <p>文章作者：{author.name}</p>
       <p>
-        <span>文章链接：{url}</span>
+        <span>文章链接：{decodeURIComponent(url)}</span>
         <span role="button" className="cursor-pointer select-none" onClick={handleCopyUrl}>
           [复制]
         </span>

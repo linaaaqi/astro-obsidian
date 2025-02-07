@@ -1,4 +1,6 @@
-import { analytics } from '@/config.json'
+import Config from '@/astro-obsidian.config'
+
+const { analytics } = Config
 
 export function WebAnalytics() {
   if (import.meta.env.DEV || !analytics.enable) return null

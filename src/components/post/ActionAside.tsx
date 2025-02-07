@@ -1,4 +1,3 @@
-import { sponsor, site } from '@/config.json'
 import { motion } from 'framer-motion'
 import * as QR from 'qrcode.react'
 import { useAtomValue } from 'jotai'
@@ -6,6 +5,9 @@ import { metaSlugAtom, metaTitleAtom } from '@/store/metaInfo'
 import clsx from 'clsx'
 import { toast } from 'react-toastify'
 import { useModal } from '@/components/ui/modal'
+import Config from '@/astro-obsidian.config'
+
+const { sponsor, site } = Config
 
 interface ShareData {
   url: string

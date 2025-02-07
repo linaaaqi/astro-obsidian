@@ -1,6 +1,8 @@
 import { useLayoutEffect, useState } from 'react'
-import { footer } from '@/config.json'
 import { getDiffInDays } from '@/utils/date'
+import Config from '@/astro-obsidian.config'
+
+const { footer } = Config
 
 export function RunningDays() {
   const [days, setDays] = useState(0)
