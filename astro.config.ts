@@ -13,10 +13,13 @@ import tailwind from '@astrojs/tailwind'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
-import { site } from './src/config.json'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import swup from '@swup/astro'
+import AstroObsidianConfig from './src/astro-obsidian.config'
+import rehypeShiki from '@shikijs/rehype'
+
+const { site } = AstroObsidianConfig
 
 // https://astro.build/config
 export default defineConfig({

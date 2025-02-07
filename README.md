@@ -53,7 +53,7 @@ Enjoy it!
 │   ├── styles/
 │   ├── utils/
 │   └── config.json
-├── astro.config.mjs
+├── astro.config.ts
 ├── README.md
 ├── package.json
 └── tsconfig.json

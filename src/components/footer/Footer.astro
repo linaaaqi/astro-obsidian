@@ -1,9 +1,11 @@
 ---
 import { ThemeSwitch } from './ThemeSwitch'
-import { author, footer } from '@/config.json'
+import Config from '@/astro-obsidian.config'
 import { getAllPostsWordCount } from '@/utils/content'
 import { RunningDays } from './RunningDays'
 import Link from './Link.astro'
+
+const { author, footer } = Config
 
 const sinceYear = new Date(footer.startTime).getFullYear()
 const thisYear = new Date().getFullYear()

@@ -1,4 +1,4 @@
-import { defineConfig } from '@/utils/defineConfig'
+import { defineConfig } from './utils/defineConfig'
 
 export default defineConfig({
   site: {
@@ -98,7 +98,7 @@ export default defineConfig({
     perPage: 10,
   },
   footer: {
-    startTime: '2024-04-14T00:00:00Z',
+    startTime: '2019-05-28T00:00:00Z',
   },
   comments: {
     enable: 'giscus',
