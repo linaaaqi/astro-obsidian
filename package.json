@@ -20,6 +20,8 @@
     "@astrojs/rss": "4.0.11",
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "6.0.0",
+    "@esotericsoftware/spine-player-4.1": "npm:@esotericsoftware/spine-player@4.1.54",
+    "@esotericsoftware/spine-player": "npm:@esotericsoftware/spine-player@4.0.30",
     "@radix-ui/react-dialog": "0.1.8-rc.54",
     "@shikijs/rehype": "1.29.2",
     "@swup/astro": "1.5.0",

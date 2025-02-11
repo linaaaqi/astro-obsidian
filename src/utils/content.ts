@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content'
 // 获取所有文章
 async function getAllPosts() {
   const allPosts = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
+    return import.meta.env.PROD ? !data.draft : true
   })
 
   return allPosts

@@ -26,6 +26,12 @@ importers:
       '@astrojs/tailwind':
         specifier: 6.0.0
         version: 6.0.0(astro@5.2.5(@types/node@20.12.8)(jiti@1.21.7)(rollup@2.79.1)(terser@5.31.6)(typescript@5.4.5)(yaml@2.7.0))(tailwindcss@3.4.17)
+      '@esotericsoftware/spine-player':
+        specifier: npm:@esotericsoftware/spine-player@4.0.30
+        version: 4.0.30
+      '@esotericsoftware/spine-player-4.1':
+        specifier: npm:@esotericsoftware/spine-player@4.1.54
+        version: '@esotericsoftware/spine-player@4.1.54'
       '@radix-ui/react-dialog':
         specifier: 0.1.8-rc.54
         version: 0.1.8-rc.54(@types/react@18.2.78)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1159,6 +1165,24 @@ packages:
     engines: {node: '>=18'}
     cpu: [x64]
     os: [win32]
+
+  '@esotericsoftware/spine-core@4.0.30':
+    resolution: {integrity: sha512-sSgtMs1aJV7Qf62tW/Gmn22izc2Rf2ibA4bPJNf9h1S35Dl+pLs+jykrJnNiX2wRhVA1M1JqYBL+huTQfRv6gw==}
+
+  '@esotericsoftware/spine-core@4.1.54':
+    resolution: {integrity: sha512-AWveBC+sj1GvmrBPSIzQ2TuCV21ZLPCVkPjYEfeyGpoDN76yK1+gCwvO8/hPlRwB9hZy6IcB1dnz/QatynjChA==}
+
+  '@esotericsoftware/spine-player@4.0.30':
+    resolution: {integrity: sha512-4u0npNbMnLK/umnz2drt99mDFHQjKLF0bN5sKFxxguw2xjrxXctFGsU0ye25DQ2Ih0p9pg3UzcPYk32XBvgsJg==}
+
+  '@esotericsoftware/spine-player@4.1.54':
+    resolution: {integrity: sha512-zMBPE8DIPZ+gQcuPiFs5T1+Sz8jbZVLWqBY9uXAFOokoeiIO3F1I+40IyhEU+7/41ZhxYu4addChnN/W6PSZFA==}
+
+  '@esotericsoftware/spine-webgl@4.0.30':
+    resolution: {integrity: sha512-rbqSXpCs5Dxd1kG8YruwhfXmt3YY5XsucY1WGNpdnCtd+FZUbibHPxXbHBcoI5u1FiZM+GiIPD4TTl44dPp8fg==}
+
+  '@esotericsoftware/spine-webgl@4.1.54':
+    resolution: {integrity: sha512-NwO85NV1+OFgC5wqz3ubaRxbRbxTtjIntd1NBy4cs1RQU8eSAys6aH3Sme6jQdWajS0g8QZiQqYneQFjkqjY/w==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -6532,6 +6556,26 @@ snapshots:
 
   '@esbuild/win32-x64@0.24.2':
     optional: true
+
+  '@esotericsoftware/spine-core@4.0.30': {}
+
+  '@esotericsoftware/spine-core@4.1.54': {}
+
+  '@esotericsoftware/spine-player@4.0.30':
+    dependencies:
+      '@esotericsoftware/spine-webgl': 4.0.30
+
+  '@esotericsoftware/spine-player@4.1.54':
+    dependencies:
+      '@esotericsoftware/spine-webgl': 4.1.54
+
+  '@esotericsoftware/spine-webgl@4.0.30':
+    dependencies:
+      '@esotericsoftware/spine-core': 4.0.30
+
+  '@esotericsoftware/spine-webgl@4.1.54':
+    dependencies:
+      '@esotericsoftware/spine-core': 4.1.54
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
