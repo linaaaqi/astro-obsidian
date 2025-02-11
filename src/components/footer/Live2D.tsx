@@ -102,7 +102,7 @@ export function Live2D(props: Live2DProps) {
   return (
     <div
       id="player-container"
-      className="hidden md:block fixed bottom-8 right-4 z-50 w-64 h-64"
+      className="hidden md:block fixed bottom-0 right-4 z-50 w-64 h-64"
       ref={containerRef}
     />
   )
