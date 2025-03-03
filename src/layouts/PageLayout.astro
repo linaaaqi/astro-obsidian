@@ -3,6 +3,7 @@ import Layout from './Layout.astro'
 import { Header } from '@/components/header/Header'
 import Footer from '@/components/footer/Footer.astro'
 import { Provider } from '@/components/provider/Provider'
+import { Stars } from '../components/Stars'
 
 interface Props {
   title?: string
@@ -18,6 +19,8 @@ const { title, description, image } = Astro.props
 
   <Header client:only="react" />
   <main class="relative z-1 pt-16 min-h-main bg-primary">
+    <Stars client:only="react" />
+
     <div class="swup-transition-fade">
       <slot />
     </div>
