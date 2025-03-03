@@ -48,7 +48,7 @@ const Star = function () {
 
 export const Stars = () => {
   return (
-    <div className="absolute top-0 left-0 w-full h-full -z-1">
+    <div className="absolute top-0 left-0 w-full h-full -z-1 overflow-hidden">
       {[...Array(300)].map((_, i) => (
         <Star key={i} />
       ))}
