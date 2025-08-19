@@ -4,6 +4,20 @@ import { useAtom } from 'jotai'
 export function ThemeSwitch() {
   const [theme, setTheme] = useAtom(themeAtom)
 
+  function changeGiscusTheme(theme: '') {
+    function sendMessage<T>(message: T) {
+      const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame');
+      if (!iframe?.contentWindow) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    sendMessage({
+      setConfig: {
+        theme: theme,
+      },
+    })
+  }
+
   const left = { light: 4, system: 36, dark: 68 }[theme]
 
   return (
@@ -14,10 +28,7 @@ export function ThemeSwitch() {
           transform: `translateX(${left}px)`,
         }}
       ></div>
-      <div
-        className="p-[3px] flex rounded-full border border-primary"
-        role="radiogroup"
-      >
+      <div className="p-[3px] flex rounded-full border border-primary" role="radiogroup">
         <button
           className="size-[32px] flex items-center justify-center"
           type="button"
