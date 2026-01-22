@@ -33,7 +33,7 @@
     "hastscript": "^9.0.0",
     "jotai": "^2.8.0",
     "katex": "^0.16.10",
-    "lodash-es": "^4.17.21",
+    "lodash-es": "^4.17.23",
     "mdast-util-to-string": "^4.0.0",
     "ogl": "^1.0.11",
     "pagefind": "1.1.1",
